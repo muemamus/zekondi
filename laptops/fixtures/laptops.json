@@ -1,0 +1,171 @@
+[
+    {
+        "pk":1,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image01.jpg",
+          "year":2017,
+          "screen_size":13,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.5 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":1069.00,
+          "instock":true,
+          "stock_size":20
+        }
+        
+    },
+    {
+        "pk":2,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image02.jpg",
+          "year":2017,
+          "screen_size":15,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.5 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":999.00,
+          "instock":true,
+          "stock_size":10
+        }
+        
+    },
+    {
+        "pk":3,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image03.jpg",
+          "year":2016,
+          "screen_size":15,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.0 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":750.00,
+          "instock":true,
+          "stock_size":2
+        }
+        
+    },
+    {
+        "pk":4,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image04.jpg",
+          "year":2011,
+          "screen_size":13,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.5 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":999.00,
+          "instock":true,
+          "stock_size":5
+        }
+        
+    },
+    {
+        "pk":5,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image05.jpg",
+          "year":2016,
+          "screen_size":15,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.5 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":1069.00,
+          "instock":true,
+          "stock_size":2
+        }
+        
+    },
+    {
+        "pk":6,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image06.jpg",
+          "year":2010,
+          "screen_size":13,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.5 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":750.00,
+          "instock":true,
+          "stock_size":25
+        }
+        
+    },
+    {
+        "pk":7,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image07.jpg",
+          "year":2018,
+          "screen_size":13,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.5 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":1069.00,
+          "instock":true,
+          "stock_size":2
+        }
+        
+    },{
+        "pk":8,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image08.jpg",
+          "year":2011,
+          "screen_size":15,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.5 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":1450.00,
+          "instock":true,
+          "stock_size":20
+        }
+        
+    },
+    {
+        "pk":9,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image01.jpg",
+          "year":2017,
+          "screen_size":13,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.5 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":850.00,
+          "instock":true,
+          "stock_size":2
+        }
+        
+    },
+    {
+        "pk":10,
+        "model":"laptops.laptop",
+        "fields": {
+          "image": "image010.jpg",
+          "year":2017,
+          "screen_size":13,
+          "hard_drive_size":"256 gb",
+          "ram_size":"16 gb",
+          "processor_speed":"3.5 Ghz",
+          "delivery_option":"Free international shipping",
+          "price":1069.00,
+          "instock":true,
+          "stock_size":20
+        }
+        
+    }
+]
