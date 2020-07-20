@@ -16,4 +16,4 @@ class Laptop(models.Model):
     stock_size = models.IntegerField()
 
     def __str__(self):
-        return
+        return self.delivery_option
