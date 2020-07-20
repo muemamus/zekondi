@@ -3,7 +3,9 @@
         "pk":1,
         "model":"laptops.laptop",
         "fields": {
+          "name" : "Apple Macbook",
           "image": "image01.jpg",
+          "image_url": "https://i.ebayimg.com/images/g/Yh4AAOSwpR1dNwPu/s-l1600.jpg",
           "year":2017,
           "screen_size":13,
           "hard_drive_size":"256 gb",
@@ -20,7 +22,9 @@
         "pk":2,
         "model":"laptops.laptop",
         "fields": {
+          "name" : "Apple Macbook",
           "image": "image02.jpg",
+          "image_url":"https://i.ebayimg.com/images/g/GJUAAOSwKFpe4ULM/s-l1600.jpg",
           "year":2017,
           "screen_size":15,
           "hard_drive_size":"256 gb",
@@ -37,7 +41,9 @@
         "pk":3,
         "model":"laptops.laptop",
         "fields": {
+          "name" : "Apple Macbook",
           "image": "image03.jpg",
+          "image_url":"https://i.ebayimg.com/images/g/XmwAAOSwFOpfDbO~/s-l1600.jpg",
           "year":2016,
           "screen_size":15,
           "hard_drive_size":"256 gb",
@@ -54,8 +60,10 @@
         "pk":4,
         "model":"laptops.laptop",
         "fields": {
+          "name" : "Apple Macbook",
           "image": "image04.jpg",
           "year":2011,
+          "image_url":"https://i.ebayimg.com/images/g/i4UAAOSwxoxfD2hg/s-l1600.jpg",
           "screen_size":13,
           "hard_drive_size":"256 gb",
           "ram_size":"16 gb",
@@ -71,6 +79,8 @@
         "pk":5,
         "model":"laptops.laptop",
         "fields": {
+         "image_url":"https://i.ebayimg.com/images/g/~KMAAOSw8OteQFaa/s-l1600.jpg",
+          "name" : "Apple Macbook",
           "image": "image05.jpg",
           "year":2016,
           "screen_size":15,
@@ -88,6 +98,8 @@
         "pk":6,
         "model":"laptops.laptop",
         "fields": {
+         "image_url":"https://i.ebayimg.com/images/g/IX0AAOSwEwBdYrZ4/s-l500.jpg",
+         "name" : "Apple Macbook",
           "image": "image06.jpg",
           "year":2010,
           "screen_size":13,
@@ -105,6 +117,8 @@
         "pk":7,
         "model":"laptops.laptop",
         "fields": {
+            "image_url":"https://i.ebayimg.com/images/g/gnsAAOSwz5pePaey/s-l1600.jpg",
+          "name" : "Apple Macbook",
           "image": "image07.jpg",
           "year":2018,
           "screen_size":13,
@@ -121,6 +135,8 @@
         "pk":8,
         "model":"laptops.laptop",
         "fields": {
+         "image_url":"https://i.ebayimg.com/images/g/QDUAAOSw2eNe4UMb/s-l1600.jpg",
+         "name" : "Apple Macbook",
           "image": "image08.jpg",
           "year":2011,
           "screen_size":15,
@@ -138,6 +154,8 @@
         "pk":9,
         "model":"laptops.laptop",
         "fields": {
+                  "name" : "Apple Macbook",
+            "image_url": "https://i.ebayimg.com/images/g/Yh4AAOSwpR1dNwPu/s-l1600.jpg",
           "image": "image01.jpg",
           "year":2017,
           "screen_size":13,
@@ -155,6 +173,10 @@
         "pk":10,
         "model":"laptops.laptop",
         "fields": {
+            "image_url": "https://i.ebayimg.com/images/g/hb0AAOSwGOVePaeu/s-l1600.jpg",
+                  "name" : "Apple Macbook",
+            
+
           "image": "image010.jpg",
           "year":2017,
           "screen_size":13,

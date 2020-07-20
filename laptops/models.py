@@ -5,6 +5,8 @@ from django.db import models
 class Laptop(models.Model):
 
     image = models.ImageField()
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    name = models.CharField(max_length=20, default='Apple Macbook')
     year = models.IntegerField()
     screen_size = models.IntegerField()
     hard_drive_size = models.CharField(max_length=20)
@@ -16,4 +18,4 @@ class Laptop(models.Model):
     stock_size = models.IntegerField()
 
     def __str__(self):
-        return self.delivery_option
+        return f"{self.name}"

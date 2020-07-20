@@ -5,8 +5,10 @@ class LaptopAdmin(admin.ModelAdmin):
 
     list_display = (
          "image",
+         "name",
           "year",
           "screen_size",
+          "image_url",
           "hard_drive_size",
           "ram_size",
           "processor_speed",
