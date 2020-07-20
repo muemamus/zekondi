@@ -112,3 +112,9 @@ a.category-badge > span.badge:hover {
         height: calc(100vh - 116px);
     }
 }
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
