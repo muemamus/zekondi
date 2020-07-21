@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'home',
     'laptops',
     'bag',
+    'checkout',
     
 ]
 
