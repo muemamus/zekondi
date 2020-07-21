@@ -101,6 +101,7 @@ WSGI_APPLICATION = 'zekondi.wsgi.application'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 
 # Database
