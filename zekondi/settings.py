@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'laptops',
     'bag',
     'checkout',
-    
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +59,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'zekondi.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -77,6 +79,10 @@ TEMPLATES = [
                 'bag.contexts.bag_contents',
 
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
