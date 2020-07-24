@@ -1,6 +1,6 @@
 ### Zekondo
 
-This is a simple which enable people to buy used macbooks
+This is a simple application  enable people to buy used macbooks
 
 ### Attribution
 
