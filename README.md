@@ -12,9 +12,9 @@ Django  with Code Institute.It is just a different application with Code Institu
 
 ### Features to add in the future
 
--Ability of other sellers to sell their products
+- Ability of other sellers to sell their products
 
--Add buyers' order history
+- Add buyers' order history
 
--Add tests
+- Add tests
 
