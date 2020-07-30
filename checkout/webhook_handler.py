@@ -6,6 +6,8 @@ from laptops.models import Laptop
 import json
 import time
 
+# Functions to be called when stripe payment intent succeed or fail
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
@@ -82,23 +84,14 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(bag).items():
-                    Laptop = Laptop.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
+                    laptop = Laptop.objects.get(id=item_id)
+                    order_line_item = OrderLineItem(
                             order=order,
-                            Laptop=Laptop,
+                            Laptop=laptop,
                             quantity=item_data,
                         )
-                        order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                Laptop=Laptop,
-                                quantity=quantity,
-                                Laptop_size=size,
-                            )
-                            order_line_item.save()
+                    order_line_item.save()
+                    
             except Exception as e:
                 if order:
                     order.delete()

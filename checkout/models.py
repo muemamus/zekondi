@@ -1,3 +1,35 @@
+"""
+
+Two models : Order and OrderLineItem
+
+Order has following properties
+          Order number
+          User profile foreign key
+          Fullname
+          Email
+          Phone number
+          Country
+          Postcode
+          Town/City
+          Street address(1 and 2)
+          County
+          Date
+          Delivery cost
+          Order total
+          Grand total
+          Original bag
+          Stripe pid
+
+OrderLineItem has following properties
+
+          Laptop Foreign key
+          Order Foreign key
+          Quantity
+          Lineitem Total
+
+
+ """
+
 import uuid
 
 from django.db import models
@@ -31,6 +63,7 @@ class Order(models.Model):
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+    
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID

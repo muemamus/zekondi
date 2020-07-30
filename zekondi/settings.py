@@ -63,6 +63,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'zekondi.urls'
 
+# Telling Django what bootstrap version to use
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
@@ -101,6 +102,15 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
+"""
+ Simple settings for allauth app
+ Email and username required for authentication
+ Users must verify their email for login
+ There are two email fields for email
+ Minimum length of username is 4
+ The login url is /accounts/login/
+ After login,users should be directed to home page
+"""
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -119,6 +129,15 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
+"""
+ 
+ What database in development and production
+
+ Development : sqlite3
+
+ Production : Heroku postgres
+
+"""
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -131,7 +150,10 @@ else:
         }
     }
 
+"""
+  Settings to be used when deploying images and static assets to AWS
 
+"""
 if 'USE_AWS' in os.environ:
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
@@ -199,24 +221,31 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-FREE_DELIVERY_THRESHOLD = 50
-STANDARD_DELIVERY_PERCENTAGE = 10
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-# Stripe
-FREE_DELIVERY_THRESHOLD = 50
-STANDARD_DELIVERY_PERCENTAGE = 10
+# Stripe settings
+FREE_DELIVERY_THRESHOLD = 0
+STANDARD_DELIVERY_PERCENTAGE = 0
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
+DEFAULT_FROM_EMAIL = 'zekondi.application@example.com'
+
+"""
+
+ What email service to use in development and production
+
+ Development : Just print the email in the user console or terminal
+
+ Production : Use gmail to send email to users
+
+"""
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
+    DEFAULT_FROM_EMAIL = 'zekondi.application@example.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True

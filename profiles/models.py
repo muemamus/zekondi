@@ -1,3 +1,22 @@
+"""
+
+User profile has following properties
+
+          User fields
+          Country
+          Postcode
+          Town
+          Addresses(1 and 2)
+          County
+
+User profile is an extension of user.
+
+When a user is created or updated,the user profile should also be created
+or updated.
+
+ """
+
+
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save

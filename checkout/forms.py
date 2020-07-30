@@ -2,6 +2,8 @@ from django import forms
 from .models import Order
 
 
+# Making an order form with several fields using Django.
+
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order

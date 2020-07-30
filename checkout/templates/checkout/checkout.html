@@ -1,3 +1,11 @@
+<!-- 
+
+    We are extending this template with base template and override extra css,page
+    header,content and postloadjs blocks defined in the base template
+
+ -->
+
+
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
@@ -36,6 +44,7 @@
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
+                <!-- Order summary elements -->
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
@@ -70,6 +79,9 @@
                     </div>
                 </div>
             </div>
+            <!-- form created using crispy
+                 cripsy form with bootstrap4 styling
+             -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">

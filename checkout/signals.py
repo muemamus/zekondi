@@ -3,6 +3,8 @@ from django.dispatch import receiver
 
 from .models import OrderLineItem
 
+# Functions to be called when orderline item is updated or deleted
+
 @receiver(post_save, sender=OrderLineItem)
 def update_on_save(sender, instance, created, **kwargs):
     """

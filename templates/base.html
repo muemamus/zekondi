@@ -1,4 +1,25 @@
 {% load static %}
+
+<!-- 
+   This HTML template contains the header element which is used across the
+   site and the following blocks which child templates can override
+      1.meta
+      2.extra meta
+      3.core css
+      4.core js
+      5.extra js
+      6.extra title
+      7.page header
+      8.content
+      9.postloadjs
+    
+    Header element is made of 
+      1.Logo
+      2.Search input
+      3.Dropdown menu
+      4.Shopping bag balance
+
+ -->
  
 <!doctype html>
 <html lang="en">
@@ -34,7 +55,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Zekondo {% block extra_title %}{% endblock %}</title>
+    <title>Zekondi {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">

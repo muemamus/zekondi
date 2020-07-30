@@ -7,6 +7,8 @@ from checkout.webhook_handler import StripeWH_Handler
 
 import stripe
 
+
+# Listening for stripe payment intent webooks and call relevant functions
 @require_POST
 @csrf_exempt
 def webhook(request):

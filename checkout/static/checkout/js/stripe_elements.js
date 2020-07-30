@@ -5,10 +5,17 @@
     https://stripe.com/docs/stripe-js
 */
 
+// Get Stripe Api keys from webpage elements
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
+
+// Set up stripe
 var stripe = Stripe(stripePublicKey);
+
+// Create instance of stripe elements
 var elements = stripe.elements();
+
+
 var style = {
     base: {
         color: '#000',
@@ -24,7 +31,11 @@ var style = {
         iconColor: '#dc3545'
     }
 };
+
+// Create a stripe card element,also add styles
 var card = elements.create('card', {style: style});
+
+// Mount card element into webpage
 card.mount('#card-element');
 
 // Handle realtime validation errors on the card element
@@ -44,6 +55,7 @@ card.addEventListener('change', function (event) {
 });
 
 // Handle form submit
+
 var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
@@ -61,8 +73,11 @@ form.addEventListener('submit', function(ev) {
         'client_secret': clientSecret,
         'save_info': saveInfo,
     };
-    var url = '/checkout/cache_checkout_data/';
 
+    // where to send the request
+    var url = '/checkout/cache_checkout_data/';
+    
+    // How to send and what data
     $.post(url, postData).done(function () {
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
@@ -93,6 +108,7 @@ form.addEventListener('submit', function(ev) {
                 }
             },
         }).then(function(result) {
+            // what to do with error
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
                 var html = `
@@ -105,7 +121,10 @@ form.addEventListener('submit', function(ev) {
                 $('#loading-overlay').fadeToggle(100);
                 card.update({ 'disabled': false});
                 $('#submit-button').attr('disabled', false);
-            } else {
+            
+            } 
+            // What to when operation is successful
+            else {
                 if (result.paymentIntent.status === 'succeeded') {
                     form.submit();
                 }

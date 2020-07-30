@@ -4,7 +4,27 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Laptop
 
-# Create your views here.
+"""
+
+  This handles GET HTTP request to http://localhost:8080/laptops or 
+  http://zekondi.herokuapp.com/laptops
+
+  It sends back  to the client a list of laptops inside HTML file.
+
+  The clients can also search the list of laptops by using either name of the laptop
+  and price.
+
+  http://zekondi.herokuapp.com/laptops?q=name
+  http://zekondi.herokuapp.com/laptops?q=price
+ 
+  The clients can also the sort list of laptops using price either in ascending
+  or descending order
+
+  http://zekondi.herokuapp.com/laptops/?sort=price&direction=asc
+  http://zekondi.herokuapp.com/laptops/?sort=price&direction=desc
+
+
+"""
 
 
 def all_laptops(request):
@@ -14,7 +34,8 @@ def all_laptops(request):
     query = None
     sort = None
     direction = None
-
+    
+    # Sort the list of laptops
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -28,7 +49,7 @@ def all_laptops(request):
                     sortkey = f'-{sortkey}'
             laptops = laptops.order_by(sortkey)
 
-
+        # Search the list of laptops using name or price
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -48,6 +69,15 @@ def all_laptops(request):
 
     return render(request, 'laptops/laptops.html',context)
 
+
+"""
+  This handles GET HTTP request to http://localhost:8080/laptops/<laptop_id>
+  or http://zekondi.herokuapp.com/laptops/<laptop_id>
+
+  It sends back  to the client information of a laptop with given laptop id
+  inside HTML file.
+
+"""
 
 def laptop_detail(request, laptop_id):
     """ A view to show individual laptop details """
